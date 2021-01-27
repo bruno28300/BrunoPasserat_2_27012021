@@ -23,7 +23,6 @@ main {}
 
 main,
 .footer {
-    position: relative;
     max-width: 1170px;
     margin: auto;
 }
@@ -87,6 +86,7 @@ i.fa-info {
 /* VIGNETTES */
 
 .vignettes {
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px #ccc;
 }
@@ -127,6 +127,7 @@ ul {
 
 nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -135,7 +136,6 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
     padding: 0 20px;
     line-height: 40px;
 }
@@ -185,6 +185,12 @@ i.fa-map-marker-alt {
     color: #777;
     background: #eee;
     border-radius: 10px 0 0 10px;
+}
+
+i.fa-search {
+    width: 40px;
+    margin-left: -40px;
+    color: #fff;
 }
 
 input {
@@ -258,7 +264,6 @@ button {
 /* HEBERGEMENTS */
 
 #hebergements {
-    max-width: 770px;
     padding: 30px;
     border-radius: 10px;
     background: #f2f2f2;
@@ -269,11 +274,11 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     margin: auto;
 }
 
 .hebergements .vignettes {
+    max-width: 220px;
     margin-bottom: 20px;
     padding: 5px;
     background: #fff;
@@ -331,11 +336,8 @@ button {
 .populaires .details {
     display: flex;
     flex-direction: column;
-    padding-right: 10px;
-}
-
-.populaires p.rating {
-    flex: 2;
+    justify-content: space-between;
+    padding-right: 15px;
 }
 
 /* ACTIVITES */
@@ -348,16 +350,14 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+}
+
+.activites .large, .activites .double {
+    max-width: 240px;
 }
 
 .activites h3 {
     margin-left: 15px;
-}
-
-.activites .vignettes {
-    background: #fff;
-    border-radius: 10px;
 }
 
 .activites .double {
@@ -367,28 +367,8 @@ button {
 }
 
 .activites img {
-    width: 100%;
     border-radius: 10px 10px 0 0;
-}
-
-.activites .large {
-    height: 370px;
-}
-
-.activites .medium1 {
-    height: 200px;
-}
-
-.activites .medium2 {
-    height: 175px;
-}
-
-.activites .small1 {
-    height: 140px;
-}
-
-.activites .small2 {
-    height: 160px;
+    overflow: hidden;
 }
 
 /* FOOTER */
@@ -424,24 +404,23 @@ footer li {
 @media only screen and (max-width: 1200px) {
     header {
         justify-content: space-between;
-        max-width: 70%;
     }
 
     .central {
         flex-wrap: wrap-reverse;
     }
-    
+
     #hebergements {
         max-width: 100%;
         background: #fff;
         justify-content: space-around;
     }
-    
+
     .hebergements {
         width: 800px;
         margin: auto;
     }
-    
+
     #populaires {
         width: 100%;
         border-radius: 0;
@@ -451,17 +430,27 @@ footer li {
         flex-direction: row;
     }
 
+    .activites {
+        width: 600px;
+        margin: auto;
+    }
+
     #activites h2 {
         margin-left: 20px;
+    }
+
+    .footer {
+        margin-left: 40px;
     }
 }
 
 /* ECRANS INFERIEURS A 992PX */
 
 @media only screen and (max-width: 992px) {
-    
-    .hebergements {
-        width: 550px;
+
+    .hebergements,
+    .activites {
+        width: 500px;
     }
 
     .populaires {
@@ -473,44 +462,62 @@ footer li {
 
 /* ECRANS INFERIEURS A 768PX */
 
-@media only screen and (max-width: 768px) {
-
-}
+@media only screen and (max-width: 768px) {}
 
 /* ECRANS INFERIEURS A 600PX */
 
 @media only screen and (max-width: 600px) {
-    header {
-        max-width: 50%;
-    }
+    header {}
 
     .vignettes {
         width: 90%;
     }
 
+    nav {
+        margin: 20px 0;
+    }
+
+    nav li {
+        flex: 1;
+    }
+
     nav li:hover {
-        margin-top: -1px;
+        margin-top: 0px;
+        margin-bottom: -3px;
         border-top: none;
         border-bottom: 3px solid #0065fc;
     }
-    
-    .hebergements, .populaires, .activites {
-        flex-direction: column;
+
+    .register {
+        position: absolute;
+        top: 40px;
+        right: 40px;
     }
-    
-    .hebergements {
+
+    button {
+        max-width: 40px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    i.fa-search {
+        margin-left: 0px;
+        color: #fff;
+    }
+
+    .hebergements,
+    .populaires,
+    .activites {
         width: 100%;
+        flex-direction: column;
+        align-content: center;
     }
-
     
+    .activites 
+
     .activites .vignettes {
-        height: 170px;
+        height: 290px;
     }
-    
-    .activites img {
-        height: 120px;
-    }
-
 
 
 }
