@@ -70,7 +70,7 @@ i {
 }
 
 i.fa-star {
-    font-size: 0.7em;
+    font-size: 10px;
 }
 
 i.no-star {
@@ -219,6 +219,7 @@ button {
 
 .filtres {
     display: flex;
+    flex-wrap: wrap;;
     margin: 20px auto;
 }
 
@@ -261,24 +262,28 @@ button {
 
 .central {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 /* HEBERGEMENTS */
 
 #hebergements {
-    max-width: 770px;
-    padding: 30px;
+    max-width: 780px;
     border-radius: 10px;
     background: #f2f2f2;
     flex: 1;
 }
 
+#hebergements h2,
+#hebergements p.plus {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 .hebergements {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
 }
 
@@ -301,14 +306,16 @@ button {
 /* POPULAIRES */
 
 #populaires {
-    padding: 30px;
+    width: 340px;
     border-radius: 10px;
     background: #f2f2f2;
 }
 
 #populaires h2 {
     display: inline-block;
-    width: 92%;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 #populaires i.fa-chart-line {
@@ -318,7 +325,6 @@ button {
 .populaires {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -330,7 +336,7 @@ button {
 }
 
 .populaires .vignettes {
-    max-width: 280px;
+    max-width: 270px;
     padding: 5px;
     background: #fff;
 }
@@ -414,7 +420,7 @@ footer h3 {
 }
 
 footer ul {
-    width: 340px;
+    width: 320px;
     margin-bottom: 20px;
     list-style-type: none;
 }
@@ -441,12 +447,13 @@ footer li {
     }
 
     #hebergements {
+        max-width: 100%;
         background: #fff;
     }
 
     .hebergements img,
     .activites img {
-        width: 400px;
+        width: 395px;
     }
 
     #populaires {
@@ -491,7 +498,7 @@ footer li {
 
     .hebergements img,
     .activites img {
-        width: 250px;
+        width: 255px;
     }
 
 }
@@ -562,7 +569,7 @@ footer li {
     .hebergements img,
     .activites img {
         height: 150px;
-        width: 350px;
+        width: 320px;
     }
 
     .activites .large img,
