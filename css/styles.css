@@ -478,10 +478,8 @@ footer li {
 
     .hebergements img,
     .activites img {
-        width: 320px;
+        width: 330px;
     }
-
-
 }
 
 /* ECRANS INFERIEURS A 768PX */
@@ -494,9 +492,8 @@ footer li {
 
     .hebergements img,
     .activites img {
-        width: 255px;
+        width: 260px;
     }
-
 }
 
 /* ECRANS INFERIEURS A 600PX */
@@ -584,7 +581,6 @@ footer li {
     .activites .small2 img {
         max-height: 200px;
     }
-
 }
 
 /* ECRANS INFERIEURS A 480PX */
@@ -600,7 +596,4 @@ footer li {
     .activites img {
         width: 300px;
     }
-
-
-
 }
